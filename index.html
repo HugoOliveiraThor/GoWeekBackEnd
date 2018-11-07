@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<html>
+    <head>
+        <rel="stylesheet" type="text/css" href="css/main.css" />
+        <meta http-equiv="content-type" content="text/php; charset=utf-8" />
+
+        <title>Teste Socket</title>
+    </head>
+
+    <body>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js'></script>
+    <script type="text/javascript">
+        var socket = io('http://localhost:3000')
+        socket.on('tweet', function(data) {
+                console.log(data)
+        })
+        socket.on('like', function(data) {
+                console.log(data)
+        })
+    </script>    
+    
+    </body>
+</html>
